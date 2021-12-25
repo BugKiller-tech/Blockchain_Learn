@@ -115,6 +115,6 @@ console.log('Starting miner');
 hCoin.minePendingTransactions('hkg-address');
 console.log('Balance of hkg', hCoin.getBalanceOfAddress('hkg-address'));
 
-console.log('Starting miner');
-hCoin.minePendingTransactions('hkg-address');
-console.log('Balance of hkg', hCoin.getBalanceOfAddress('hkg-address'));
+// console.log('Starting miner');
+// hCoin.minePendingTransactions('hkg-address');
+// console.log('Balance of hkg', hCoin.getBalanceOfAddress('hkg-address'));
