@@ -29,7 +29,6 @@ class Blockchain {
 
   addBlock(newBlock) {
     newBlock.previousHash = this.getLatestBlock().hash;
-    console.log('prev hash is', newBlock.previousHash)
     newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock); // in reality, we can't add block easily. it will need to have some validation
   }
@@ -59,9 +58,10 @@ console.log(JSON.stringify(hChain, null, 4));
 
 console.log('Is block chain valid ? ' + hChain.isChainValid());
 
-hChain.chain[1].data = { amount: 100 }
+// HERR for show to guys..
+// hChain.chain[1].data = { amount: 100 }
 // hChain.chain[1].hash = hChain.chain[1].calculateHash(); // if we recalculate then ok ? NOPE
-console.log('Is block chain valid ?? ' + hChain.isChainValid());
+// console.log('Is block chain valid ?? ' + hChain.isChainValid());
 
 // if something broken block chain, then we need a way to rollback of the chain.
 
